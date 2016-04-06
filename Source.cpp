@@ -17,7 +17,7 @@ public:
 		}
 		else
 			cout << "Number not Valid!" << endl;
-		if ((col = "red") || (col = "black"))
+		if (col == "red" || col == "black")
 		{
 			colr = col;
 		}
@@ -36,7 +36,10 @@ public:
 	}
 	void print()
 	{
-		cout << colr << " " << numbr << endl;
+		if ((numbr >= 1 && numbr <= 10) && (colr == "red" || colr == "black"))
+			cout << colr << " " << numbr << endl;
+		else
+			cout << "Validate your inputs!" << endl;
 	}
 };
 
@@ -48,7 +51,7 @@ class DeckOfCards
 
 int main()
 {
-	Card crd(5, "red");
+	Card crd(5, "Red");
 
 	crd.print();
 	return 0;
