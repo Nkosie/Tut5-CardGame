@@ -10,20 +10,20 @@ class Card
 	int numbr;
 	string colr;
 public:
-	Card()
+	Card()	//initialising my card, incase somebody just prints before creating a card of his own
 	{
 		numbr = 1;
 		colr = "red";
 	}
 	~Card(){}
-	Card(int num, string col)
+	Card(int num, string col) //overloaded card and initialising it considering contrains
 	{
-		if (num >= 1 && num <= 10)
+		if (num >= 1 && num <= 10) 
 		{
 			numbr = num;
 		}
 		else
-			cout << "Number not Valid!" << endl;
+			cout << "CARD Number not Valid!" << endl;
 		if (col == "red" || col == "black")
 		{
 			colr = col;
@@ -32,14 +32,14 @@ public:
 			cout << "Invalid Colour!" << endl;
 	}
 
-	string colour()
+	string colour()	//
 	{
-		return colr;
+		return colr;		//return colour of card
 	}
 
 	int number()
 	{
-		return numbr;
+		return numbr;		//returning number of card
 	}
 	void print()
 	{
@@ -108,7 +108,7 @@ public:
 int main()
 {
 	srand(static_cast<unsigned int>(time(0)));
-	Card crd(5, "red");
+	Card crd(11, "red");
 	crd.print();
 	DeckOfCards Dcards;
 	Dcards.reset();
